@@ -1,0 +1,456 @@
+:root {
+    /* colors */
+    --black: #000;
+    --white: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    line-height: 1.22;
+}
+
+p {
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+
+ul,
+ol,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+}
+
+img {
+    width: 100%;
+}
+
+/* Common Classes */
+.custom-form {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Progress-bar */
+#progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #e9ecef;
+    margin-bottom: 20px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+#progress-bar-inner {
+    height: 100%;
+    width: 0%;
+    background-color: #476036;
+}
+
+#step-indicator {
+    color: #476036;
+    font-size: 12px;
+    font-weight: 400;
+    margin: 0 0 5px 0;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+/*  */
+#step-form h4 {
+    font-family: "Poppins", Sans-serif;
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 600;
+    color: #476036;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#step-form label , .check-input .form-check h6 {
+    font-size: 12px;
+    color: #505050;
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+
+#step-form .field-item {
+    margin-bottom: 20px;
+}
+
+#step-form .field-item input::placeholder {
+    font-size: 12px !important;
+}
+
+#step-form .form-control:focus,
+#step-form .form-select:focus {
+    box-shadow: none;
+    border-color: #476036;
+}
+
+#step-form .form-check-input:checked {
+    border-color: #476036 !important;
+    background-color: transparent !important;
+}
+
+#step-form .form-check-input:focus,
+#step-form .form-select:focus {
+    box-shadow: none;
+}
+
+.check-input label img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.check-input {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.check-input .form-check input+label {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.check-input .form-check input:checked+label {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) !important;
+    background-color: #4760361a !important;
+}
+
+.check-input .form-check input {
+    display: none;
+}
+
+.check-input label.form-check-label {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.check-input h6 {
+    font-family: "Poppins", Sans-serif;
+    font-size: 16px;
+    line-height: 1.1;
+    font-weight: 500;
+    color: #476036;
+    margin-top: 11px;
+}
+
+.check-input .form-check-label {
+    font-size: 12px;
+    color: #505050;
+    margin-bottom: 0;
+    font-weight: 500;
+    max-width: 150px;
+    width: 100%;
+    text-align: center;
+}
+
+.check-input .form-check {
+    display: block;
+    min-height: 1.5rem;
+    max-width: 140px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Buttons */
+.buttons  {
+    margin-top: 30px;
+}
+
+.main-btn {
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all ease 0.6s;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.main-btn.btn-prev {
+    border: 1px solid #476036;
+    color: #476036;
+    background-color: transparent;
+}
+
+.main-btn.btn-prev:hover {
+    background-color: #476036;
+    color: #fff;
+}
+
+.main-btn.btn-next {
+    background-color: #476036;
+    border: 1px solid #476036;
+    color: #fff;
+}
+
+.main-btn.btn-next:hover {
+    background-color: transparent;
+    color: #476036;
+}
+
+.main-btn.btn-save {
+    background-color: #caa93c;
+    border: 1px solid #caa93c;
+    color: #fff;
+}
+
+.main-btn.btn-save:hover {
+    border: 1px solid #caa93c;
+    color: #caa93c;
+    background-color: transparent;
+}
+
+/*  */
+/*  */
+.range-item {
+    position: relative;
+    margin-bottom: 20px;
+    padding: 20px;
+    background: #efefefad;
+    border-radius: 10px;
+}
+
+
+.range-item:not(:last-child) {
+    margin-bottom: 24px;
+}
+
+.range-item .range-input {
+    margin-top: 6px;
+}
+
+.range-item .range-input input {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.range-item ul {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: calc(100% + 34.4px);
+    margin: 0 -17px;
+}
+
+.range-item ul .list-inline-item:not(:last-child) {
+    margin-right: 0;
+}
+
+.range-item ul .list-inline-item span {
+    position: relative;
+    min-width: 58px;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    padding-top: 4px;
+    word-break: break-word;
+    color: #000;
+}
+
+.range-item .range-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 15px;
+    width: calc(100% - 14px);
+    background-color: #ddd;
+    z-index: 0;
+    margin: 0 7px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.range-item .range-input.disable-range+ul .list-inline-item span::before {
+    background-color: #b1b1b1;
+}
+
+.range-item .range-input.disable-range .range-line .active-line {
+    background-color: #b1b1b1;
+}
+
+.range-item .range-input.disable-range+ul .list-inline-item.active span::before {
+    background-color: #777777;
+}
+
+.range-item .range-input .dot-line {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: calc(100% - 24px);
+    left: 0;
+    z-index: 1;
+}
+
+.range-item .range-input .active-dot {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    cursor: pointer;
+    background-color: #476036;
+    height: 20px;
+    width: 20px;
+    z-index: 11;
+    left: 0%;
+    border-radius: 50%;
+}
+
+.range-item .range-input .range-line .active-line {
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #476036;
+    transition: all 0.1s ease;
+}
+
+.range-item ul .list-inline-item span::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #696969;
+}
+
+.range-item ul .list-inline-item.active span::before {
+    background-color: white;
+}
+
+.range-item .range-input input:disabled~.dot-line .active-dot {
+    background-color: #d9d9d9;
+    border: 4px solid #b1b1b1;
+}
+
+input[type="range"]::-moz-range-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    margin-top: -8px;
+    /* Centers thumb on the track */
+    background-color: #ffff;
+    height: 15px;
+    width: 15px;
+    border: 4px solid #ffff;
+    z-index: 11;
+    box-shadow: none;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    /* Override default look */
+    appearance: none;
+    margin-top: -8px;
+    /* Centers thumb on the track */
+    background-color: #0000;
+    height: 24px;
+    width: 24px;
+    border: 4px solid #0000;
+    box-shadow: none;
+    z-index: 11;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background-color: #f0f0f000;
+}
+
+input[type="range"]::-moz-range-progress {
+    background-color: #f0f0f000;
+}
+
+input[type="range"]::-ms-track {
+    background-color: #f0f0f000;
+}
+
+input[type="range"]::-moz-range-track {
+    background-color: #f0f0f000;
+}
+
+/* IE*/
+input[type="range"]::-ms-fill-lower {
+    background-color: #f0f0f000;
+}
+
+input[type="range"]::-ms-fill-upper {
+    background-color: #f0f0f000;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+    box-shadow: none !important;
+    background-color: #f0f0f000;
+}
+
+input[type="range"]:focus::-moz-range-thumb {
+    box-shadow: none !important;
+    background-color: #f0f0f000;
+}
+
+input[type="range"]:focus::-ms-thumb {
+    background-color: #f0f0f000;
+    box-shadow: none !important;
+}
+
+input[type="range"]:disabled::-webkit-slider-thumb {
+    background-color: #0000;
+    border: 4px solid #0000;
+}
+
+input[type="range"]:disabled::-moz-range-thumb {
+    background-color: #0000;
+    border: 4px solid #0000;
+}
+
+/*  */

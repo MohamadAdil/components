@@ -1,0 +1,2011 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/font.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Step Form</title>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="custom-form">
+                <!-- Progress Bar and Indicator -->
+                <div id="step-indicator">
+                    Step <span id="current-step">1</span> of <span id="total-steps">2</span>
+                </div>
+                <div id="progress-bar">
+                    <div id="progress-bar-inner"></div>
+                </div>
+                <!-- Step Form -->
+                <div id="step-form">
+                    <!-- Step 1 -->
+                    <div class="step active" id="step1">
+                        <h4>Primary Applicant</h4>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName"
+                                        placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="middleName" class="form-label">Middle Name</label>
+                                    <input type="text" class="form-control" id="middleName" name="middleName"
+                                        placeholder="Middle Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="buttons">
+                                    <button type="button" class="main-btn btn-next">Next</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 2 -->
+                    <div class="step" id="step2">
+                        <h4>Primary Applicant</h4>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="field1" class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" id="field1" name="field1"
+                                        placeholder="Date of Birth">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 3 -->
+                    <div class="step" id="step3">
+                        <h4>Primary Applicant</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <fieldset class="check-input gender-input">
+                                    <h6>Gender:</h6>
+
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="male1"
+                                                value="Male">
+                                            <label class="form-check-label" for="male1">
+                                                <img src="./images/user-male.png" alt="Male">
+                                                <h6> Male</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="female1"
+                                                value="Female">
+                                            <label class="form-check-label" for="female1">
+                                                <img src="./images/user-female.png" alt="Female">
+                                                <h6>Female</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="other1"
+                                                value="Other">
+                                            <label class="form-check-label" for="other1">
+                                                <img src="./images/user-other.png" alt="Other">
+                                                <h6> Other</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 4 -->
+                    <div class="step" id="step4">
+                        <h4>Primary Applicant</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <fieldset class="check-input Marital-input">
+                                    <h6>Marital Status:</h6>
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="marital_status"
+                                                id="married" value="Married" required>
+                                            <label class="form-check-label" for="married">
+                                                <img src="./images/user-male.png" alt="Married">
+                                                <h6> Married</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="marital_status"
+                                                id="unmarried" value="Unmarried" required>
+                                            <label class="form-check-label" for="unmarried">
+                                                <img src="./images/user-female.png" alt="Unmarried">
+                                                <h6> Unmarried</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &amp; Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 5 -->
+                    <div class="step" id="step5">
+                        <h4>Primary Applicant</h4>
+
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="cell" class="form-label">Cell</label>
+                                    <input type="text" class="form-control" id="cell" name="cell" placeholder="Cell">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="email" class="form-label">E-Mail</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="E-mail">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save & Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Step 6 -->
+                    <div class="step" id="step6">
+                        <h4>Primary Applicant</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <fieldset class="check-input current-input">
+                                    <h6>Current Residence:</h6>
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="residence" id="rent"
+                                                value="Rent" required>
+                                            <label class="form-check-label" for="rent">
+                                                <img src="./images/user-male.png" alt="Rent">
+                                                <h6>Rent</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="residence" id="own"
+                                                value="Own" required>
+                                            <label class="form-check-label" for="own">
+                                                <img src="./images/user-female.png" alt="Own">
+                                                <h6>Own</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="residence" id="parents"
+                                                value="Live with Parents" required>
+                                            <label class="form-check-label" for="parents">
+                                                <img src="./images/user-other.png" alt="Live with Parents">
+                                                <h6>Live W/Parents</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="field-item mb-3">
+                                <label for="other" class="form-label">Other</label>
+                                <input type="text" class="form-control" id="other" name="other"
+                                    placeholder="Specify other residence">
+                            </div>
+                        </div>
+                        <!-- Buttons -->
+                        <div class="col-lg-12">
+                            <div class="buttons d-flex align-items-center justify-content-between">
+                                <div class="left">
+                                    <button type="button" class="main-btn btn-prev">Previous</button>
+                                    <button type="button" class="main-btn btn-next">Next</button>
+                                </div>
+                                <div class="right">
+                                    <button type="submit" class="main-btn btn-save" id="saveContinueBtn" disabled>Save &
+                                        Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 7 -->
+                    <div class="step" id="step7">
+                        <h4>Primary Applicant</h4>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="address" name="address"
+                                        placeholder="Address">
+                                </div>
+                                <div class="field-item">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="City">
+                                </div>
+                                <div class="field-item">
+                                    <label for="province" class="form-label">Province</label>
+                                    <input type="text" class="form-control" id="province" name="province"
+                                        placeholder="Province">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="postalCode" class="form-label">Postal Code</label>
+                                    <input type="text" class="form-control" id="postalCode" name="postalCode"
+                                        placeholder="Postal Code">
+                                </div>
+                                <div class="field-item">
+                                    <label for="sin" class="form-label">S.I.N</label>
+                                    <input type="text" class="form-control" id="sin" name="sin" placeholder="S.I.N">
+                                </div>
+                                <div class="field-item">
+                                    <label for="homeNumber" class="form-label">Home #</label>
+                                    <input type="text" class="form-control" id="homeNumber" name="homeNumber"
+                                        placeholder="Home #">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save & Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Step 8 -->
+                    <div class="step" id="step8">
+                        <h4>Primary Applicant</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <div class="range-item">
+                                    <h6>Years at Current Address / Months</h6>
+                                    <div class="range-input d-flex position-relative">
+                                        <input type="range" min="0" max="10" class="form-range" name="dataShared"
+                                            value="0">
+                                        <div class="range-line">
+                                            <span class="active-line" style="width: 0%;"></span>
+                                        </div>
+                                        <div class="dot-line">
+                                            <span class="active-dot" style="left: 0%;"></span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="list-inline-item active">
+                                            <span>0</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>0.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 conditional-value d-none" id="pa">
+                                <div class="field-item">
+                                    <label for="field1" class="form-label">Previous Address</label>
+                                    <input type="text" class="form-control" id="field1" name="field1"
+                                        placeholder="Previous Address">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 conditional-value d-none" id="yearr">
+                                <div class="field-item">
+                                    <label for="field1" class="form-label">Years</label>
+                                    <input type="text" class="form-control" id="field1" name="field1"
+                                        placeholder="Years">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 9 -->
+                    <div class="step" id="step9">
+                        <h4>Primary Applicant</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="rent-payment" class="form-label">Monthly Mortgage/Rent Payment:</label>
+                                    <input type="text" class="form-control currency-input" id="rent-payment1"
+                                        name="rent-payment" placeholder="Monthly Mortgage/Rent Payment:">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form -2 -->
+                    <!-- Step 10 -->
+                    <div class="step" id="step10">
+                        <h4>Employment</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="field1" class="form-label">Current Employer/Company</label>
+                                    <input type="text" class="form-control" id="field1" name="field1"
+                                        placeholder="Current Employer/Company">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 11 -->
+                    <div class="step" id="step11">
+                        <h4>Employment</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="employerAddress" class="form-label">Employer Address</label>
+                                    <input type="text" class="form-control" id="employerAddress" name="employerAddress"
+                                        placeholder="Employer Address" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="City"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="province" class="form-label">Province</label>
+                                    <input type="text" class="form-control" id="province" name="province"
+                                        placeholder="Province" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="postalCode" class="form-label">Postal Code</label>
+                                    <input type="text" class="form-control" id="postalCode" name="postalCode"
+                                        placeholder="Postal Code" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid postal code (e.g., A1A 1A1).
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 12 -->
+                    <div class="step" id="step12">
+                        <h4>Employment</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="work" class="form-label">Work</label>
+                                    <input type="text" class="form-control" id="work" name="work" placeholder="Work"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset class="check-input Income-input">
+                                    <h6>Income:</h6>
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="incomeType" id="salary"
+                                                value="Salary" required>
+                                            <label class="form-check-label" for="salary">
+                                                <img src="./images/user-male.png" alt="Salary">
+                                                <h6> Salary</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="incomeType"
+                                                id="commission" value="Commission" required>
+                                            <label class="form-check-label" for="commission">
+                                                <img src="./images/user-female.png" alt="Commission">
+                                                <h6> Commission</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="incomeType"
+                                                id="selfEmployed" value="Self-Employed" required>
+                                            <label class="form-check-label" for="selfEmployed">
+                                                <img src="./images/user-other.png" alt="Self-Employed">
+                                                <h6> Self-Employed</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="incomeType" id="hourly"
+                                                value="Hourly" required>
+                                            <label class="form-check-label" for="hourly">
+                                                <img src="./images/user-other.png" alt="Hourly">
+                                                <h6> Hourly</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12 Income-condition d-none">
+                                <div class="range-item">
+                                    <h6>Self-Employed Length Years / Months</h6>
+                                    <div class="range-input d-flex position-relative">
+                                        <input type="range" min="0" max="10" class="form-range" id="selfEmployedLength"
+                                            name="selfEmployedLength" value="0">
+                                        <div class="range-line">
+                                            <span class="active-line" style="width: 0%;"></span>
+                                        </div>
+                                        <div class="dot-line">
+                                            <span class="active-dot" style="left: 0%;"></span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="list-inline-item active">
+                                            <span>0</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>0.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 Income-condition d-none" id="annualIncome">
+                                <div class="field-item">
+                                    <label for="annualIncome" class="form-label">Annual Income...</label>
+                                    <input type="text" class="form-control currency-input" id="annualIncome"
+                                        name="annualIncome" placeholder="$.">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 Income-condition d-none" id="additionalIncome">
+                                <div class="field-item">
+                                    <label for="additionalIncome" class="form-label">Additional income</label>
+                                    <input type="text" class="form-control currency-input" id="additionalIncome"
+                                        name="additionalIncome" placeholder="$">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Buttons -->
+                        <div class="col-lg-12">
+                            <div class="buttons d-flex align-items-center justify-content-between">
+                                <div class="left">
+                                    <button type="button" class="main-btn btn-prev">Previous</button>
+                                    <button type="button" class="main-btn btn-next">Next</button>
+                                </div>
+                                <div class="right">
+                                    <button type="submit" class="main-btn btn-save" id="saveContinueBtn" disabled>Save &
+                                        Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 13 -->
+                    <div class="step" id="step13">
+                        <h4>Employment</h4>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="range-item">
+                                    <h6>Length of Employment Years / Months</h6>
+                                    <div class="range-input d-flex position-relative">
+                                        <input type="range" min="0" max="10" class="form-range" id="employmentLength"
+                                            name="employmentLength" value="0">
+                                        <div class="range-line">
+                                            <span class="active-line" style="width: 70%;"></span>
+                                        </div>
+                                        <div class="dot-line">
+                                            <span class="active-dot" style="left: 70%;"></span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="list-inline-item">
+                                            <span>0</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>0.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 conditional-value d-none" id="employerDetails">
+                                <div class="field-item">
+                                    <label for="employerJobTitle" class="form-label">Employer/Job
+                                        Title/Occupation</label>
+                                    <input type="text" class="form-control" id="employerJobTitle"
+                                        name="employerJobTitle" placeholder="Employer/Job Title/Occupation">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 conditional-value d-none" id="addressDetails">
+                                <div class="field-item">
+                                    <label for="employerAddress" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="employerAddress" name="employerAddress"
+                                        placeholder="Address">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 conditional-value d-none" id="incomeDetails">
+                                <div class="field-item">
+                                    <label for="annualIncome" class="form-label">Annual Income</label>
+                                    <input type="text" class="form-control currency-input" id="annualIncome"
+                                        name="annualIncome" placeholder="$">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 conditional-value d-none" id="employmentYears">
+                                <div class="field-item">
+                                    <label for="employmentYearsInput" class="form-label">Length Of Employment
+                                        (Yrs.)</label>
+                                    <input type="text" class="form-control" id="employmentYearsInput"
+                                        name="employmentYearsInput" placeholder="Length Of Employment (Yrs.)">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 conditional-value d-none" id="employmentMonths">
+                                <div class="field-item">
+                                    <label for="employmentMonthsInput" class="form-label">Months</label>
+                                    <input type="text" class="form-control" id="employmentMonthsInput"
+                                        name="employmentMonthsInput" placeholder="Months">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- form-3 -->
+                    <!-- Step 14 -->
+                    <div class="step" id="step14">
+                        <h4>Assets</h4>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="savings" class="form-label">Saving/Chequing (List Bank/CU)</label>
+                                    <input type="text" class="form-control" id="savings" name="savings"
+                                        placeholder="Saving/Chequing (List Bank/CU)" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="investments" class="form-label">Stock/Bonds/Mutual Funds/RRSP (List
+                                        Bank/CU)</label>
+                                    <input type="text" class="form-control" id="investments" name="investments"
+                                        placeholder="Stock/Bonds/Mutual Funds/RRSP (List Bank/CU)" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="vehicle" class="form-label">Vehicle (List Make/Model/Year)</label>
+                                    <input type="text" class="form-control" id="vehicle" name="vehicle"
+                                        placeholder="Vehicle (List Make/Model/Year)" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="other" class="form-label">Other</label>
+                                    <input type="text" class="form-control" id="other" name="other" placeholder="Other"
+                                        required>
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form 4 -->
+                    <!-- Step 15 -->
+                    <div class="step" id="step15">
+                        <h4>Joint Applicant / Guarantor</h4>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="firstName" class="form-label">First Name</label>
+                                    <input type="text" class="form-control" id="firstName" name="firstName"
+                                        placeholder="First Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="middleName" class="form-label">Middle Name</label>
+                                    <input type="text" class="form-control" id="middleName" name="middleName"
+                                        placeholder="Middle Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="lastName" class="form-label">Last Name</label>
+                                    <input type="text" class="form-control" id="lastName" name="lastName"
+                                        placeholder="Last Name">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 16 -->
+                    <div class="step" id="step16">
+                        <h4>Joint Applicant / Guarantor</h4>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="field1" class="form-label">Date of Birth</label>
+                                    <input type="date" class="form-control" id="field1" name="field1"
+                                        placeholder="Date of Birth">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 17 -->
+                    <div class="step" id="step17">
+                        <h4>Joint Applicant / Guarantor</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <fieldset class="check-input gender-input">
+                                    <h6>Gender:</h6>
+
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="male1"
+                                                value="Male">
+                                            <label class="form-check-label" for="male1">
+                                                <img src="./images/user-male.png" alt="Male">
+                                                <h6> Male</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="female1"
+                                                value="Female">
+                                            <label class="form-check-label" for="female1">
+                                                <img src="./images/user-female.png" alt="Female">
+                                                <h6>Female</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="gender" id="other1"
+                                                value="Other">
+                                            <label class="form-check-label" for="other1">
+                                                <img src="./images/user-other.png" alt="Other">
+                                                <h6> Other</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 18 -->
+                    <div class="step" id="step18">
+                        <h4>Joint Applicant / Guarantor</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <fieldset class="check-input Marital-input">
+                                    <h6>Marital Status:</h6>
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="marital_status"
+                                                id="married" value="Married" required>
+                                            <label class="form-check-label" for="married">
+                                                <img src="./images/user-male.png" alt="Married">
+                                                <h6> Married</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="marital_status"
+                                                id="unmarried" value="Unmarried" required>
+                                            <label class="form-check-label" for="unmarried">
+                                                <img src="./images/user-female.png" alt="Unmarried">
+                                                <h6> Unmarried</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &amp; Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 19 -->
+                    <div class="step" id="step19">
+                        <h4>Joint Applicant / Guarantor</h4>
+
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="cell" class="form-label">Cell</label>
+                                    <input type="text" class="form-control" id="cell" name="cell" placeholder="Cell">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="email" class="form-label">E-Mail</label>
+                                    <input type="email" class="form-control" id="email" name="email"
+                                        placeholder="E-mail">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save & Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Step 20 -->
+                    <div class="step" id="step20">
+                        <h4>Primary Applicant</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <fieldset class="check-input current-input">
+                                    <h6>Current Residence:</h6>
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="residence" id="rent"
+                                                value="Rent" required>
+                                            <label class="form-check-label" for="rent">
+                                                <img src="./images/user-male.png" alt="Rent">
+                                                <h6>Rent</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="residence" id="own"
+                                                value="Own" required>
+                                            <label class="form-check-label" for="own">
+                                                <img src="./images/user-female.png" alt="Own">
+                                                <h6>Own</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="residence" id="parents"
+                                                value="Live with Parents" required>
+                                            <label class="form-check-label" for="parents">
+                                                <img src="./images/user-other.png" alt="Live with Parents">
+                                                <h6>Live W/Parents</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="field-item mb-3">
+                                <label for="other" class="form-label">Other</label>
+                                <input type="text" class="form-control" id="other" name="other"
+                                    placeholder="Specify other residence">
+                            </div>
+                        </div>
+                        <!-- Buttons -->
+                        <div class="col-lg-12">
+                            <div class="buttons d-flex align-items-center justify-content-between">
+                                <div class="left">
+                                    <button type="button" class="main-btn btn-prev">Previous</button>
+                                    <button type="button" class="main-btn btn-next">Next</button>
+                                </div>
+                                <div class="right">
+                                    <button type="submit" class="main-btn btn-save" id="saveContinueBtn" disabled>Save &
+                                        Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 21 -->
+                    <div class="step" id="step21">
+                        <h4>Joint Applicant / Guarantor</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <fieldset class="check-input current-input">
+                                    <h6>Current Residence:</h6>
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="residence" id="rent"
+                                                value="Rent" required>
+                                            <label class="form-check-label" for="rent">
+                                                <img src="./images/user-male.png" alt="Rent">
+                                                <h6>Rent</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="residence" id="own"
+                                                value="Own" required>
+                                            <label class="form-check-label" for="own">
+                                                <img src="./images/user-female.png" alt="Own">
+                                                <h6>Own</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="residence" id="parents"
+                                                value="Live with Parents" required>
+                                            <label class="form-check-label" for="parents">
+                                                <img src="./images/user-other.png" alt="Live with Parents">
+                                                <h6>Live W/Parents</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="field-item mb-3">
+                                <label for="other" class="form-label">Other</label>
+                                <input type="text" class="form-control" id="other" name="other"
+                                    placeholder="Specify other residence">
+                            </div>
+                        </div>
+                        <!-- Buttons -->
+                        <div class="col-lg-12">
+                            <div class="buttons d-flex align-items-center justify-content-between">
+                                <div class="left">
+                                    <button type="button" class="main-btn btn-prev">Previous</button>
+                                    <button type="button" class="main-btn btn-next">Next</button>
+                                </div>
+                                <div class="right">
+                                    <button type="submit" class="main-btn btn-save" id="saveContinueBtn" disabled>Save &
+                                        Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 22 -->
+                    <div class="step" id="step22">
+                        <h4>Joint Applicant / Guarantor</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <div class="range-item">
+                                    <h6>Years at Current Address / Months</h6>
+                                    <div class="range-input d-flex position-relative">
+                                        <input type="range" min="0" max="10" class="form-range" name="dataShared"
+                                            value="0">
+                                        <div class="range-line">
+                                            <span class="active-line" style="width: 0%;"></span>
+                                        </div>
+                                        <div class="dot-line">
+                                            <span class="active-dot" style="left: 0%;"></span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="list-inline-item active">
+                                            <span>0</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>0.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 conditional-value d-none" id="pa">
+                                <div class="field-item">
+                                    <label for="field1" class="form-label">Previous Address</label>
+                                    <input type="text" class="form-control" id="field1" name="field1"
+                                        placeholder="Previous Address">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 conditional-value d-none" id="yearr">
+                                <div class="field-item">
+                                    <label for="field1" class="form-label">Years</label>
+                                    <input type="text" class="form-control" id="field1" name="field1"
+                                        placeholder="Years">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 23 -->
+                    <div class="step" id="step23">
+                        <h4>Joint Applicant / Guarantor</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="rent-payment" class="form-label">Monthly Mortgage/Rent Payment:</label>
+                                    <input type="text" class="form-control currency-input" id="rent-payment1"
+                                        name="rent-payment" placeholder="Monthly Mortgage/Rent Payment:">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form -5 -->
+                    <!-- Step 24 -->
+                    <div class="step" id="step24">
+                        <h4>Employment</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="field1" class="form-label">Current Employer/Company</label>
+                                    <input type="text" class="form-control" id="field1" name="field1"
+                                        placeholder="Current Employer/Company">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 25 -->
+                    <div class="step" id="step25">
+                        <h4>Employment</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="employerAddress" class="form-label">Employer Address</label>
+                                    <input type="text" class="form-control" id="employerAddress" name="employerAddress"
+                                        placeholder="Employer Address" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="City"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="province" class="form-label">Province</label>
+                                    <input type="text" class="form-control" id="province" name="province"
+                                        placeholder="Province" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="postalCode" class="form-label">Postal Code</label>
+                                    <input type="text" class="form-control" id="postalCode" name="postalCode"
+                                        placeholder="Postal Code" pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]"
+                                        required>
+                                    <div class="invalid-feedback">
+                                        Please provide a valid postal code (e.g., A1A 1A1).
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 26 -->
+                    <div class="step" id="step26">
+                        <h4>Employment</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="work" class="form-label">Work</label>
+                                    <input type="text" class="form-control" id="work" name="work" placeholder="Work"
+                                        required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <fieldset class="check-input Income-input">
+                                    <h6>Income:</h6>
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="incomeType" id="salary"
+                                                value="Salary" required>
+                                            <label class="form-check-label" for="salary">
+                                                <img src="./images/user-male.png" alt="Salary">
+                                                <h6> Salary</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="incomeType"
+                                                id="commission" value="Commission" required>
+                                            <label class="form-check-label" for="commission">
+                                                <img src="./images/user-female.png" alt="Commission">
+                                                <h6> Commission</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="incomeType"
+                                                id="selfEmployed" value="Self-Employed" required>
+                                            <label class="form-check-label" for="selfEmployed">
+                                                <img src="./images/user-other.png" alt="Self-Employed">
+                                                <h6> Self-Employed</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="incomeType" id="hourly"
+                                                value="Hourly" required>
+                                            <label class="form-check-label" for="hourly">
+                                                <img src="./images/user-other.png" alt="Hourly">
+                                                <h6> Hourly</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="range-item">
+                                    <h6>Self-Employed Length Years / Months</h6>
+                                    <div class="range-input d-flex position-relative">
+                                        <input type="range" min="0" max="10" class="form-range" id="selfEmployedLength"
+                                            name="selfEmployedLength" value="0">
+                                        <div class="range-line">
+                                            <span class="active-line" style="width: 0%;"></span>
+                                        </div>
+                                        <div class="dot-line">
+                                            <span class="active-dot" style="left: 0%;"></span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="list-inline-item active">
+                                            <span>0</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>0.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6" id="annualIncome">
+                                <div class="field-item">
+                                    <label for="annualIncome" class="form-label">Annual Income...</label>
+                                    <input type="text" class="form-control currency-input" id="annualIncome"
+                                        name="annualIncome" placeholder="$.">
+                                </div>
+                            </div>
+                            <div class="col-lg-6" id="additionalIncome">
+                                <div class="field-item">
+                                    <label for="additionalIncome" class="form-label">Additional income</label>
+                                    <input type="text" class="form-control currency-input" id="additionalIncome"
+                                        name="additionalIncome" placeholder="$">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Buttons -->
+                        <div class="col-lg-12">
+                            <div class="buttons d-flex align-items-center justify-content-between">
+                                <div class="left">
+                                    <button type="button" class="main-btn btn-prev">Previous</button>
+                                    <button type="button" class="main-btn btn-next">Next</button>
+                                </div>
+                                <div class="right">
+                                    <button type="submit" class="main-btn btn-save" id="saveContinueBtn" disabled>Save &
+                                        Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 27 -->
+                    <div class="step" id="step27">
+                        <h4>Employment</h4>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="range-item">
+                                    <h6>Length of Employment Years / Months</h6>
+                                    <div class="range-input d-flex position-relative">
+                                        <input type="range" min="0" max="10" class="form-range" id="employmentLength"
+                                            name="employmentLength" value="0">
+                                        <div class="range-line">
+                                            <span class="active-line" style="width: 70%;"></span>
+                                        </div>
+                                        <div class="dot-line">
+                                            <span class="active-dot" style="left: 70%;"></span>
+                                        </div>
+                                    </div>
+                                    <ul class="list-inline list-unstyled">
+                                        <li class="list-inline-item">
+                                            <span>0</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>0.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>1.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>2.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>3.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>4.5</span>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <span>+</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 conditional-value d-none" id="employerDetails">
+                                <div class="field-item">
+                                    <label for="employerJobTitle" class="form-label">Employer/Job
+                                        Title/Occupation</label>
+                                    <input type="text" class="form-control" id="employerJobTitle"
+                                        name="employerJobTitle" placeholder="Employer/Job Title/Occupation">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 conditional-value d-none" id="addressDetails">
+                                <div class="field-item">
+                                    <label for="employerAddress" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="employerAddress" name="employerAddress"
+                                        placeholder="Address">
+                                </div>
+                            </div>
+                            <div class="col-lg-12 conditional-value d-none" id="incomeDetails">
+                                <div class="field-item">
+                                    <label for="annualIncome" class="form-label">Annual Income</label>
+                                    <input type="text" class="form-control currency-input" id="annualIncome"
+                                        name="annualIncome" placeholder="$">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 conditional-value d-none" id="employmentYears">
+                                <div class="field-item">
+                                    <label for="employmentYearsInput" class="form-label">Length Of Employment
+                                        (Yrs.)</label>
+                                    <input type="text" class="form-control" id="employmentYearsInput"
+                                        name="employmentYearsInput" placeholder="Length Of Employment (Yrs.)">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 conditional-value d-none" id="employmentMonths">
+                                <div class="field-item">
+                                    <label for="employmentMonthsInput" class="form-label">Months</label>
+                                    <input type="text" class="form-control" id="employmentMonthsInput"
+                                        name="employmentMonthsInput" placeholder="Months">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- form-6 -->
+                    <!-- Step 28 -->
+                    <div class="step" id="step28">
+                        <h4>Assets</h4>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="savings" class="form-label">Saving/Chequing (List Bank/CU)</label>
+                                    <input type="text" class="form-control" id="savings" name="savings"
+                                        placeholder="Saving/Chequing (List Bank/CU)" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="investments" class="form-label">Stock/Bonds/Mutual Funds/RRSP (List
+                                        Bank/CU)</label>
+                                    <input type="text" class="form-control" id="investments" name="investments"
+                                        placeholder="Stock/Bonds/Mutual Funds/RRSP (List Bank/CU)" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="vehicle" class="form-label">Vehicle (List Make/Model/Year)</label>
+                                    <input type="text" class="form-control" id="vehicle" name="vehicle"
+                                        placeholder="Vehicle (List Make/Model/Year)" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="other" class="form-label">Other</label>
+                                    <input type="text" class="form-control" id="other" name="other" placeholder="Other"
+                                        required>
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form 7 -->
+                    <!-- Step 29 -->
+                    <div class="step" id="step29">
+                        <h4>Property Details</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="address" class="form-label">Address</label>
+                                    <input type="text" class="form-control" id="address" name="address"
+                                        placeholder="Address">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="city" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="city" name="city" placeholder="City">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="prov" class="form-label">Province</label>
+                                    <input type="text" class="form-control" id="prov" name="prov"
+                                        placeholder="Province">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="dwellingStyle" class="form-label">Dwelling Style</label>
+                                    <input type="text" class="form-control" id="dwellingStyle" name="dwellingStyle"
+                                        placeholder="Dwelling Style">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 30 -->
+                    <div class="step" id="step30">
+                        <h4>Property Details</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="condoFee" class="form-label">Condo Fee</label>
+                                    <input type="text" class="form-control" id="condoFee" name="condoFee"
+                                        placeholder="Condo Fee">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="propertyTax" class="form-label">Property Tax</label>
+                                    <input type="text" class="form-control" id="propertyTax" name="propertyTax"
+                                        placeholder="Property Tax">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="squareFt" class="form-label">Square Ft</label>
+                                    <input type="text" class="form-control" id="squareFt" name="squareFt"
+                                        placeholder="Square Ft">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 31 -->
+                    <div class="step" id="step31">
+                        <h4>Property Details</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <fieldset class="check-input Occupancy-input">
+                                    <h6>Occupancy:</h6>
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="occupancy"
+                                                id="ownerOccupied" value="Owner Occupied">
+                                            <label class="form-check-label" for="ownerOccupied">
+                                                <img src="./images/user-male.png" alt="Owner Occupied">
+                                                <h6>Owner Occupied</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="occupancy" id="rental"
+                                                value="Rental">
+                                            <label class="form-check-label" for="rental">
+                                                <img src="./images/user-female.png" alt="Rental">
+                                                <h6>Rental</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 32 -->
+                    <div class="step" id="step32">
+                        <h4>Purchase Details</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="purchasePrice" class="form-label">Purchase Price</label>
+                                    <input type="text" class="form-control" id="purchasePrice" name="purchasePrice"
+                                        placeholder="Purchase Price" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="downPayment" class="form-label">Down Payment Amount</label>
+                                    <input type="text" class="form-control" id="downPayment" name="downPayment"
+                                        placeholder="Down Payment Amount" required>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="field-item">
+                                    <label for="closingDate" class="form-label">Closing Date</label>
+                                    <input type="date" class="form-control" id="closingDate" name="closingDate"
+                                        placeholder="Closing Date" required>
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 33 -->
+                    <div class="step" id="step33">
+                        <h4>Purchase Details</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <fieldset class="check-input Buyer-input">
+                                    <h6>First Time Buyer:</h6>
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="firstTimeBuyer"
+                                                id="firstTimeYes" value="Yes" required>
+                                            <label class="form-check-label" for="firstTimeYes">
+                                                <img src="./images/user-male.png" alt="Yes">
+                                                <h6> Yes</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="firstTimeBuyer"
+                                                id="firstTimeNo" value="No" required>
+                                            <label class="form-check-label" for="firstTimeNo">
+                                                <img src="./images/user-female.png" alt="No">
+                                                <h6>No</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 34 -->
+                    <div class="step" id="step34">
+                        <h4>Purchase Details</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-12">
+                                <fieldset class="check-input Down-Payment-input">
+                                    <h6>Down Payment Source:</h6>
+                                    <div class="d-flex align-items-center gap-3 justify-content-center flex-grow-1">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="downPaymentSource"
+                                                id="personalCash" value="Personal Cash" required>
+                                            <label class="form-check-label" for="personalCash">
+                                                <img src="./images/user-male.png" alt="Personal Cash">
+                                                <h6> Personal Cash</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="downPaymentSource"
+                                                id="saleOfProperty" value="Sale Of Property" required>
+                                            <label class="form-check-label" for="saleOfProperty">
+                                                <img src="./images/user-female.png" alt="Sale Of Property">
+                                                <h6>Sale Of Property</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="downPaymentSource"
+                                                id="giftedDownPayment" value="Gifted Down Payment" required>
+                                            <label class="form-check-label" for="giftedDownPayment">
+                                                <img src="./images/user-female.png" alt="Gifted Down Payment">
+                                                <h6>Gifted Down Payment</h6>
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="radio" name="downPaymentSource"
+                                                id="otherSource" value="Other" required>
+                                            <label class="form-check-label" for="otherSource">
+                                                <img src="./images/user-female.png" alt="Other">
+                                                <h6>Other (Specify)</h6>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="col-lg-12 mb-4">
+                                <input type="text" class="form-control mt-2" id="otherSourceDetail"
+                                    name="otherSourceDetail" placeholder="Specify Other Source">
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 35 -->
+                    <div class="step" id="step35">
+                        <h4>Refinance Details</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="originalPurchasePrice" class="form-label">Original Purchase
+                                        Price</label>
+                                    <input type="text" class="form-control" id="originalPurchasePrice"
+                                        name="originalPurchasePrice" placeholder="Original Purchase Price">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="originalPurchaseDate" class="form-label">Original Purchase Date</label>
+                                    <input type="text" class="form-control" id="originalPurchaseDate"
+                                        name="originalPurchaseDate" placeholder="Original Purchase Date">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="estimatedPropertyValue" class="form-label">Estimated Property
+                                        Value</label>
+                                    <input type="text" class="form-control" id="estimatedPropertyValue"
+                                        name="estimatedPropertyValue" placeholder="Estimated Property Value">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="currentMortgageLender" class="form-label">Current Mortgage
+                                        Lender</label>
+                                    <input type="text" class="form-control" id="currentMortgageLender"
+                                        name="currentMortgageLender" placeholder="Current Mortgage Lender">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Step 36 -->
+                    <div class="step" id="step36">
+                        <h4>Refinance Details</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="currentMortgageBalance" class="form-label">Current Mortgage
+                                        Balance</label>
+                                    <input type="text" class="form-control" id="currentMortgageBalance"
+                                        name="currentMortgageBalance" placeholder="Current Mortgage Balance">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="newMortgageNeeded" class="form-label">New Mortgage Needed</label>
+                                    <input type="text" class="form-control" id="newMortgageNeeded"
+                                        name="newMortgageNeeded" placeholder="New Mortgage Needed">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="currentInterestRate" class="form-label">Current Interest Rate</label>
+                                    <input type="text" class="form-control" id="currentInterestRate"
+                                        name="currentInterestRate" placeholder="Current Interest Rate">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="preferredRateType" class="form-label">Preferred Rate Type</label>
+                                    <input type="text" class="form-control" id="preferredRateType"
+                                        name="preferredRateType" placeholder="Preferred Rate Type">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                        <button type="button" class="main-btn btn-next">Next</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Form 10 -->
+                    <!-- Step 37 -->
+                    <div class="step" id="step37">
+                        <h4>Initials</h4>
+                        <div class="row align-items-center">
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="initials" class="form-label">Initials</label>
+                                    <input type="text" class="form-control" id="initials" name="initials"
+                                        placeholder="Initials">
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="field-item">
+                                    <label for="field2" class="form-label">Placeholder Label</label>
+                                    <input type="text" class="form-control" id="field2" name="field2"
+                                        placeholder="Placeholder Text">
+                                </div>
+                            </div>
+                            <!-- Buttons -->
+                            <div class="col-lg-12">
+                                <div class="buttons d-flex align-items-center justify-content-between">
+                                    <div class="left">
+                                        <button type="button" class="main-btn btn-prev">Previous</button>
+                                    </div>
+                                    <div class="right">
+                                        <button type="submit" class="main-btn btn-save" id="saveContinueBtn"
+                                            disabled>Save &
+                                            Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script src="./js/jquery-3.7.1.slim.min.js"></script>
+    <script src="./js/jquery.mask.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
