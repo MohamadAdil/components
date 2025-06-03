@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Step Progress Bar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <style>
+      body {
+        color: white;
+
+        text-align: center;
+        font-family: "Arial", sans-serif;
+      }
+      .progress-bar-sc {
+        min-height: 100vh;
+        background: #1c5d58;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .progress-container {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        position: relative;
+        margin: 50px 0;
+      }
+      .progress-bar-custom {
+        position: absolute;
+        top: 32px;
+        width: 80%;
+        height: 4px;
+        background: #d3d3d3;
+        z-index: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .progress-bar-fill {
+        height: 4px;
+        width: 0%;
+        background: #baa650;
+        transition: width 0.5s ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+      .step {
+        width: 20%;
+        text-align: center;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 18px;
+      }
+      .step .circle {
+        width: 68px;
+        height: 68px;
+        background: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 30px;
+        color: #d9d9d9;
+        position: relative;
+        z-index: 1;
+        border: 4px solid #d9d9d9;
+      }
+      .step .circle:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 62px;
+        height: 62px;
+        background: #fff;
+        border-radius: 50%;
+        z-index: -1;
+      }
+      .step.completed .circle {
+        background: #baa650;
+        color: #baa650;
+        border: 4px solid #baa650;
+      }
+      .completed .step-text {
+        color: #baa650;
+      }
+      .step-text {
+        font-size: 14px;
+        color: #fff;
+        max-width: 140px;
+      }
+      .btn-progress {
+        margin-top: 20px;
+        background: #baa650;
+        color: #10332e;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border: 1px solid #baa650;
+      }
+      .btn-progress:hover {
+        border: 1px solid #baa650;
+        background-color: #fff;
+        color: #baa650;
+      }
+      .btn-progress:disabled {
+        background: #a09152;
+      }
+      /*  */
+      @media (max-width: 767px) {
+        .step .circle{
+          width: 48px;
+          height: 48px;
+          font-size: 20px;
+        }
+        .step .circle::before{
+          width: 42px;
+          height: 42px;
+        }
+        .step-text{
+          display: none;
+        }
+        .progress-bar-custom{
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          width: 105%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Your Custom Strategy Progress</h2>
+    <section class="progress-bar-sc">
+      <div class="container">
+        <div class="progress-container">
+          <div class="progress-bar-custom">
+            <div class="progress-bar-fill"></div>
+          </div>
+
+          <div class="step completed">
+            <div class="circle"><i class="fas fa-chart-bar"></i></div>
+            <div class="step-text">Evaluating Your Profile</div>
+          </div>
+          <div class="step">
+            <div class="circle"><i class="fas fa-chart-line"></i></div>
+            <div class="step-text">Strategic Analysis & Benchmarking</div>
+          </div>
+          <div class="step">
+            <div class="circle"><i class="fas fa-lightbulb"></i></div>
+            <div class="step-text">Curating Personalized Recommendations</div>
+          </div>
+          <div class="step">
+            <div class="circle"><i class="fas fa-map-signs"></i></div>
+            <div class="step-text">Refining Your Roadmap</div>
+          </div>
+          <div class="step">
+            <div class="circle"><i class="fas fa-clock"></i></div>
+            <div class="step-text">Final Review & Strategy Preparation</div>
+          </div>
+        </div>
+
+        <button class="btn btn-progress" id="nextStep">
+          Strategy Pending...
+        </button>
+      </div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPDF/2.5.1/jspdf.umd.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        let currentStep = 1;
+        const totalSteps = $(".step").length;
+
+        $("#nextStep").click(function () {
+          if (currentStep < totalSteps) {
+            $(".step").eq(currentStep).addClass("completed");
+            $(".progress-bar-fill").css(
+              "width",
+              (currentStep / (totalSteps - 1)) * 100 + "%"
+            );
+            currentStep++;
+
+            if (currentStep === totalSteps) {
+              $(this)
+                .text("Download AcceptedX Strategy")
+                .off("click")
+                .on("click", downloadPDF);
+            }
+          }
+        });
+
+        function downloadPDF() {
+          html2canvas(document.body, { scale: 2 }).then((canvas) => {
+            const imgData = canvas.toDataURL("image/png");
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF("p", "mm", "a4");
+            const imgWidth = 210;
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            doc.addImage(imgData, "PNG", 0, 10, imgWidth, imgHeight);
+            doc.save("AcceptedX_Strategy.pdf");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
